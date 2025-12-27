@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to DashDine</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body id="page-home">
+
+    <header id="main-header" class="header">
+        <h1 id="site-title" class="title">Welcome to DashDine</h1>
+        <p id="tagline" class="tagline">
+            Where your cravings meet their fastest ride.
+        </p>
+    </header>
+
+    <main id="main-content" class="content">
+        <section id="intro-section" class="section intro">
+            <h2 class="section-title">Fast. Fresh. At Your Door.</h2>
+            <p class="section-text">
+                Discover your favorite meals, delivered quickly and reliably.
+            </p>
+        </section>
+
+        <section id="cta-section" class="section call-to-action">
+            <button onclick="window.location.href='{% url 'choice_page' %}'" id="start-button" class="btn btn-primary">
+                Start Ordering
+            </button>
+        </section>
+    </main>
+
+    <footer id="main-footer" class="footer">
+        <p class="footer-text">
+            © 2025 DashDine. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started | DashDine</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'choice-page.css' %}">
+</head>
+<body id="page-choice">
+
+    <main id="choice-container" class="container choice">
+
+        <!-- Header -->
+        <header id="choice-header" class="header">
+            <h1 id="choice-title" class="title">Ready to DashDine?</h1>
+            <p id="choice-message" class="subtitle">
+                Your favorite meals are just a few clicks away. Would you like to sign in or create a new account?
+            </p>
+        </header>
+
+        <!-- Choice Buttons -->
+        <section id="choice-buttons" class="choice-section">
+            <button onclick="window.location.href='{% url 'sign_in' %}'" class="btn btn-primary" id="btn-signin">
+                Sign In
+            </button>
+        {% comment %} <a href="{% url 'sign_in' %}"></a> {% endcomment %}
+            <button onclick="window.location.href='{% url 'sign_up' %}'" id="btn-signup" class="btn btn-secondary">
+                Sign Up
+            </button>
+        {% comment %} <a href="{% url 'sign_up' %}"></a> {% endcomment %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="choice-footer" class="footer">
+            <p class="footer-text">
+                By continuing, you agree to our <a href="#" class="footer-link">Terms of Service</a> and <a href="#" class="footer-link">Privacy Policy</a>.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

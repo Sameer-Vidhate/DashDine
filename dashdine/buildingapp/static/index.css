@@ -1,0 +1,93 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body#page-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* ===== Header ===== */
+#main-header {
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+}
+
+#site-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#tagline {
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #d6e6ec;
+}
+
+/* ===== Main Content Card ===== */
+#main-content {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 3rem 3.5rem;
+    border-radius: 20px;
+    max-width: 520px;
+    width: 90%;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Sections ===== */
+.section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.section-text {
+    font-size: 1rem;
+    color: #cfe3ea;
+    line-height: 1.6;
+}
+
+/* ===== Button ===== */
+#start-button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+#start-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(255, 204, 51, 0.35);
+}
+
+/* ===== Footer ===== */
+#main-footer {
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+    color: #b7d0d8;
+}

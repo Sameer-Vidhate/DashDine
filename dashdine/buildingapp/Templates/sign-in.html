@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign In | DashDine</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sign-in.css' %}">
+</head>
+<body id="page-signin">
+
+    <main id="signin-container" class="container signin">
+
+        <header id="signin-header" class="header">
+            <h1 id="signin-title" class="title">Welcome Back to DashDine</h1>
+            <p id="signin-subtitle" class="subtitle">
+                Please sign in to continue enjoying your favorite meals.
+            </p>
+        </header>
+
+        <form id="signin-form" class="form signin-form" action="{% url 'open_sign_in' %}" method="post" novalidate>
+
+            <!-- Username -->
+            <div class="form-group">
+                <label for="signin-username" class="form-label">Username</label>
+                <input
+                    type="text"
+                    id="signin-username"
+                    name="username"
+                    class="form-input"
+                    placeholder="Enter your username"
+                    required
+                    minlength="3"
+                    maxlength="20"
+                    pattern="^[a-zA-Z0-9_]{3,20}$"
+                />
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="signin-password" class="form-label">Password</label>
+                <input
+                    type="password"
+                    id="signin-password"
+                    name="password"
+                    class="form-input"
+                    placeholder="Enter your password"
+                    required
+                    minlength="8"
+                />
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-actions">
+                <button type="submit" id="signin-button" class="btn btn-primary">
+                    Sign In
+                </button>
+            </div>
+
+        </form>
+
+        <footer id="signin-footer" class="footer">
+            <p class="footer-text">
+                Don't have an account? <a href="{% url 'sign_up' %}" class="footer-link">Sign up</a>
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
